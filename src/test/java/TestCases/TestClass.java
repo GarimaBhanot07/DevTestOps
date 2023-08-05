@@ -15,7 +15,7 @@ import Helper.ReadFromTextFile;
 
 public class TestClass {
 
-	int sum=0, diff=0, quotient=0;
+	int sum=0, diff=0, product=0;
 	ReadFromTextFile read;
 	String lineFromFile;
 	int a,b;
@@ -65,9 +65,9 @@ public class TestClass {
 	@Test
 	public void Test03_VerifyRemainderAmountIsMoreThanZero() {
 		
-		quotient=a/b;
-		System.out.println("quotient is "+quotient);
-		Assert.assertTrue(quotient>0);
+		product=(int) Math.multiplyFull(a, b);
+		System.out.println("product is "+product);
+		Assert.assertTrue(product>0);
 	}
 	
 }
