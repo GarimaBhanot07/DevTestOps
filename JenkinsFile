@@ -36,6 +36,26 @@ pipeline{
 				}
 			}
 		}
+		stage ('Generate And Upload Artifacts to Artifactory')
+		{
+			steps
+			{
+				rtMavenDeployer (
+                    id: 'deployer',
+                    serverId: 'Garima_JFrogArtifactory',
+                    releaseRepo: 'testrepomaven',
+                    snapshotRepo: 'testrepomaven'
+                )
+                rtMavenRun (
+                    pom: 'pom.xml',
+                    goals: 'clean install',
+                    deployerId: 'deployer',
+                )
+                rtPublishBuildInfo (
+                    serverId: 'Garima_JFrogArtifactory',
+                )
+			}
+		}
 		
     }
     post{
