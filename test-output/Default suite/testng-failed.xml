@@ -5,9 +5,8 @@
     <classes>
       <class name="TestCases.TestClass">
         <methods>
-          <include name="Test02_VerifyDiffereneAmountIsMoreThanZero"/>
           <include name="initialize"/>
-          <include name="Test03_VerifyRemainderAmountIsMoreThanZero"/>
+          <include name="Test04_VerifyGivenStringsAreEqual"/>
         </methods>
       </class> <!-- TestCases.TestClass -->
     </classes>
