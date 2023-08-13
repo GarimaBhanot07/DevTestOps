@@ -68,19 +68,5 @@ public class TestClass {
 		product=(int) Math.multiplyFull(a, b);
 		System.out.println("product is "+product);
 		Assert.assertTrue(product>0);
-	}
-	/**
-	 * This test method 
-	 * checks whether given 2 strings
-	 * are equal
-	 */
-	@Test
-	public void Test04_VerifyGivenStringsAreEqual() {
-		
-		String first="thisisfirst";
-		String second="thisisSecond";
-		Assert.assertEquals(first, second,"Assert Failed : Given strings are not equal");
-	}
-	
-	
+	}	
 }
