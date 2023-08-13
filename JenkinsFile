@@ -43,8 +43,8 @@ pipeline{
 				rtMavenDeployer (
                     id: 'deployer',
                     serverId: 'Garima_JFrogArtifactory',
-                    releaseRepo: 'testrepomaven',
-                    snapshotRepo: 'testrepomaven'
+                    releaseRepo: 'example-repo-local',
+                    snapshotRepo: 'example-repo-local'
                 )
                 rtMavenRun (
                     pom: 'pom.xml',
